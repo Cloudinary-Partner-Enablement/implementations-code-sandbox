@@ -1,0 +1,16 @@
+html
+    head
+        title=Completed
+    body
+        h3 Task Completed
+        if multilayer
+            if response
+                div.response
+                    p Response:
+                    each val, key in response
+                        p.values=key+":"+val
+        else
+            p Response:
+            p=response
+        form( action="/" method="get")
+            input( type="submit" value="Return to home")
